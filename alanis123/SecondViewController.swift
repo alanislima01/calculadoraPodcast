@@ -9,11 +9,19 @@
 import UIKit
 
 class SecondViewController: UIViewController {
+        
+    override func viewDidLoad() {
+        testeDesespero()
+    }
+    
+    @IBOutlet var labelMinutosPicker: UILabel!
 
     
-        // Do any additional setup after loading the view.
-    }
+    
+    func testeDesespero(){
+        self.labelMinutosPicker.text = "Aqui estão algumas sugestões de Podcasts para você em uma média de \(UserDefaults.standard.integer(forKey: "key")) minutos:"
 
+    }
 
     /*
     // MARK: - Navigation
@@ -24,3 +32,4 @@ class SecondViewController: UIViewController {
         // Pass the selected object to the new view controller.
     }
     */
+}

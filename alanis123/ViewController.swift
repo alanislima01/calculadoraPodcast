@@ -12,7 +12,6 @@ import UIKit
 class ViewController: UIViewController, UIPickerViewDataSource, UIPickerViewDelegate {
     
     
-    
     let arrayPodcast: [String] = ["10", "20", "30", "40", "50", "60", "90", "120"]
      
 
@@ -63,9 +62,14 @@ class ViewController: UIViewController, UIPickerViewDataSource, UIPickerViewDele
     
     @IBOutlet var labelResultado: UILabel!
     
-
     @IBOutlet var mensagemONumeroDoPodcastÉ: UIImageView!
 
+    @IBAction func shareBotao(_ sender: Any) {
+        shareResult()
+    }
+    
+        
+    
     
     //viewDidLoad quer dizer "tela carregou" / view pode ser visao ou tela
     override func viewDidLoad() {
@@ -78,6 +82,7 @@ class ViewController: UIViewController, UIPickerViewDataSource, UIPickerViewDele
         self.fundoBorrado.isHidden = true
         self.pickerPodcast.delegate = self
         self.pickerPodcast.dataSource = self
+        //self.versugestoes
         // esse ultimo self eh para falar que vai la para a classe viewcontroller
         
         // Do any additional setup after loading the view. (faça qualquer coisa -configuracao- que voce precise no carregamento do app)
@@ -107,10 +112,16 @@ class ViewController: UIViewController, UIPickerViewDataSource, UIPickerViewDele
         print(tempoDePercurso)
         
         let selectedPodcast = pickerPodcast.selectedRow(inComponent: 0)
+        
+        //armazenamento da inform
+        
         // para saber o numero da lista escolhido no podcast
         let tempoDePodcast = arrayPodcast[selectedPodcast]
         
         print(tempoDePodcast)
+                
+        UserDefaults.standard.set(Int(tempoDePodcast), forKey: "key")
+
 
         let tempoDePercursoFloat: Float? = Float(tempoDePercurso)
         let tempoDePodcastFloat: Float? = Float(tempoDePodcast)
@@ -123,7 +134,7 @@ class ViewController: UIViewController, UIPickerViewDataSource, UIPickerViewDele
             //esse soDividir foi feito na minha classe do outro campo
             
             print(qntdDePodcasts)
-
+            
             self.fundoBorrado.isHidden = false
             //labelResultado.text = String(qntdDePodcasts) + " Podcasts"
             //podemos fazer tambem: usando uma variavel dentro de uma string: \() --> embaixo eh para mostrar o
@@ -133,10 +144,19 @@ class ViewController: UIViewController, UIPickerViewDataSource, UIPickerViewDele
         else{
             self.fundoBorrado.isHidden = false
             self.mensagemONumeroDoPodcastÉ.isHidden = true
+            //nao conseguimos esconder botao (self.botaoVerSugestoes("").isHidden = true)
             self.labelResultado.text = "Infelizmente não foi possível calcular. Insira os tempos corretamente!"
 
         }
 
+    }
+    
+    func shareResult() {
+        let shareText = [ labelResultado.text ]
+        let activityViewController = UIActivityViewController(activityItems: shareText as [Any], applicationActivities: nil)
+        activityViewController.popoverPresentationController?.sourceView = self.view
+
+        self.present(activityViewController, animated: true, completion: nil)
     }
     
 }

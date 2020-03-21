@@ -23,8 +23,8 @@
                                 <rect key="frame" x="-126" y="397" width="552" height="536"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Coracao logo" translatesAutoresizingMaskIntoConstraints="NO" id="N1a-r5-GcV">
-                                <rect key="frame" x="320" y="51" width="38" height="38"/>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="newLogo" translatesAutoresizingMaskIntoConstraints="NO" id="N1a-r5-GcV">
+                                <rect key="frame" x="301" y="46" width="69" height="69"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" showsTouchWhenHighlighted="YES" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="46n-Yj-V1i">
@@ -88,13 +88,6 @@
                                 <rect key="frame" x="150" y="323" width="120" height="75"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
                             </pickerView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="PodT" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="K88-hH-r8G">
-                                <rect key="frame" x="322" y="84" width="34" height="17"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
                             <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="5BO-oy-m4D">
                                 <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -107,20 +100,20 @@
                                         <rect key="frame" x="320" y="524" width="29" height="28"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <fontDescription key="fontDescription" style="UICTFontTextStyleBody"/>
-                                        <state key="normal" image="stop 2-2"/>
+                                        <state key="normal" image="Group"/>
                                         <connections>
                                             <action selector="botaoVoltar" destination="BYZ-38-t0r" eventType="touchUpInside" id="o6J-Wm-0Gn"/>
                                         </connections>
                                     </button>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="X PODCASTS" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="WME-oP-bMa">
-                                        <rect key="frame" x="102" y="597" width="217" height="130"/>
+                                        <rect key="frame" x="102" y="599" width="217" height="130"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <fontDescription key="fontDescription" style="UICTFontTextStyleHeadline"/>
                                         <color key="textColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="O numero de Podcasts que você pode escutar nesse percurso é de_" translatesAutoresizingMaskIntoConstraints="NO" id="nTa-er-XVQ">
-                                        <rect key="frame" x="107" y="540" width="207" height="102"/>
+                                        <rect key="frame" x="107" y="552" width="207" height="102"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                     </imageView>
                                     <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6On-EZ-ciY">
@@ -128,7 +121,15 @@
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <state key="normal" image="versugestao"/>
                                         <connections>
-                                            <segue destination="Lsi-IE-Mod" kind="show" id="Zcd-X3-7tn"/>
+                                            <segue destination="Lsi-IE-Mod" kind="show" id="FfW-vm-5gz"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8Hf-Sm-NcH">
+                                        <rect key="frame" x="74" y="528" width="29" height="27"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <state key="normal" image="share"/>
+                                        <connections>
+                                            <action selector="shareBotao:" destination="BYZ-38-t0r" eventType="touchUpInside" id="JqJ-Rp-4Vi"/>
                                         </connections>
                                     </button>
                                 </subviews>
@@ -160,11 +161,11 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="fundoResultado" translatesAutoresizingMaskIntoConstraints="NO" id="igP-D1-tvH">
-                                <rect key="frame" x="-146" y="-69" width="701" height="912"/>
+                                <rect key="frame" x="-146" y="-16" width="701" height="912"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="opções" translatesAutoresizingMaskIntoConstraints="NO" id="SEa-od-tYe">
-                                <rect key="frame" x="-7" y="276" width="429" height="198"/>
+                                <rect key="frame" x="-8" y="276" width="429" height="198"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Olha só!" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jum-PU-8fI">
@@ -181,8 +182,8 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Aqui estão algumas sugestões de Podcasts para você em média de X:" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mgc-zG-DwE">
-                                <rect key="frame" x="20" y="120" width="363" height="129"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Aqui estão algumas sugestões de Podcasts para você em uma média de X minutos:" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mgc-zG-DwE">
+                                <rect key="frame" x="20" y="120" width="339" height="129"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="25"/>
                                 <nil key="textColor"/>
@@ -193,6 +194,9 @@
                         <viewLayoutGuide key="safeArea" id="yAA-E3-9EP"/>
                     </view>
                     <navigationItem key="navigationItem" id="5ta-P1-qP5"/>
+                    <connections>
+                        <outlet property="labelMinutosPicker" destination="mgc-zG-DwE" id="0Or-tZ-bEE"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="YOl-FJ-X4t" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -200,15 +204,16 @@
         </scene>
     </scenes>
     <resources>
-        <image name="Coracao logo" width="38" height="38"/>
         <image name="Curvas" width="496" height="431"/>
+        <image name="Group" width="32" height="31"/>
         <image name="O numero de Podcasts que você pode escutar nesse percurso é de_" width="233" height="65"/>
         <image name="Rectangle 2" width="321" height="267"/>
         <image name="Status Bar" width="398" height="835"/>
         <image name="botaoselect" width="316" height="77"/>
         <image name="fundoResultado" width="376" height="812"/>
+        <image name="newLogo" width="57" height="64"/>
         <image name="opções" width="376" height="177"/>
-        <image name="stop 2-2" width="32" height="31"/>
+        <image name="share" width="512" height="512"/>
         <image name="verresultados" width="376" height="44"/>
         <image name="versugestao" width="236" height="52"/>
     </resources>
